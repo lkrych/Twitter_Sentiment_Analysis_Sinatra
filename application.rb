@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'chartkick'
 require_relative 'analyzer.rb'
-require 'pry'
+
 
 ######twitter code####################
 require 'twitter'
