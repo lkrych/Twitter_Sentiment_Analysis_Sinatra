@@ -63,7 +63,11 @@ end
 
 
 get '/' do
+    sample_pics = []
+    @sample_names = ["@kanyewest", "@realdonaldtrump", "@big_ben_clock", "@SenWarren" ]
+    @sample_names.inject([]) {|sample_pics, sample_name| sample_pics << client.user(sample_name).profile_image_url.to_s}
     haml :index
+    
 end
 
 get '/search' do
