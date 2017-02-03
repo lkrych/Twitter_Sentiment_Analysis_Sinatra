@@ -78,4 +78,3 @@ get '/search' do
     haml :search
 end
 
-ash = mine_tweets("ashvalejohn", client, analyzer)
