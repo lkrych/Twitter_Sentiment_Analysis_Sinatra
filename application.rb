@@ -63,9 +63,14 @@ end
 
 
 get '/' do
-    sample_pics = []
+    @sample_pics = []
     @sample_names = ["@kanyewest", "@realdonaldtrump", "@big_ben_clock", "@SenWarren" ]
-    @sample_names.inject([]) {|sample_pics, sample_name| sample_pics << client.user(sample_name).profile_image_url.to_s}
+    @sample_names.inject(@sample_pics) {|arr, sample_name| arr << client.user(sample_name).profile_image_url.to_s}
+    @sample_hash = {}
+    @sample_names.each_with_index do |name,index|
+        @sample_hash[name] = @sample_pics[index]
+    end
+    @url = "search?screen_name="
     haml :index
     
 end

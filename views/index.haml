@@ -1,7 +1,18 @@
-%p
-  Enter a twitter handle into the search bar below to see how positive or negative their last 50 tweets were.
+%h4
+  Enter a Twitter handle to see if a user is negative, positive or neutral.
 %form.form-inline{:action => '/search', :method => "get"}
   .form-group
     %label.sr-only{:for => "screen_name"} screen_name
     %input.form-control{:name => "screen_name", :placeholder => "@screen_name", :type => "text"}/
-  %button.btn.btn-default{:type => "submit"} Search
+  %button.btn.btn-default{:type => "submit"} Analyze
+%br
+%h5
+  Try these accounts
+- @sample_hash.each do |key,value|
+  .col-md-3
+    %a{:href => "#{@url + key}"}
+      %img(src = "#{value}")
+      %br
+      %h7 
+        = key
+      
