@@ -45,7 +45,7 @@ get '/' do
         @sample_hash[name] = @sample_pics[index]
     end
     @url = "search?screen_name="
-    haml :index
+    erb :index
     
 end
 
@@ -53,8 +53,7 @@ get '/search' do
     @user_name = params[:screen_name]
     @sentiment_hash, @tweet_hash = mine_tweets(@user_name,client,analyzer)
     @profile_pic = client.user(@user_name).profile_image_url.to_s
-    puts @tweet_hash
     
-    haml :search
+    erb :search
 end
 

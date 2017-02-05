@@ -1,0 +1,25 @@
+<h4>
+  Enter a Twitter handle to see if a user is negative, positive or neutral.
+</h4>
+<form action="/search" class="form-inline" method="get">
+  <div class="form-group">
+    <label class="sr-only" for="screen_name">screen_name</label>
+    <input class="form-control" name="screen_name" placeholder="@screen_name" type="text"></input>
+  </div>
+  <button class="btn btn-default" type="submit">Analyze</button>
+</form>
+<br/>
+<h5>
+  Try these accounts
+</h5>
+<% @sample_hash.each do |key,value| %>
+  <div class="col-md-3">
+    <a href="<%= @url + key %>">
+      <img src= <%= value %>>
+      <br/>
+      <h7>
+        <%= key %>
+      </h7>
+    </a>
+  </div>
+<% end %>
