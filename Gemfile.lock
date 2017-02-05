@@ -23,8 +23,6 @@ GEM
     equalizer (0.0.11)
     faraday (0.10.1)
       multipart-post (>= 1.2, < 3)
-    haml (4.0.7)
-      tilt
     http (2.1.0)
       addressable (~> 2.3)
       http-cookie (~> 1.0)
@@ -64,7 +62,6 @@ PLATFORMS
 DEPENDENCIES
   chartkick
   colorize
-  haml
   sinatra!
   twitter
 
