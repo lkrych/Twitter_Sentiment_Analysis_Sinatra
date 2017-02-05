@@ -3,6 +3,7 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     / http://getbootstrap.com/
     %link{:href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", :rel => "stylesheet"}/
+    %link{:href => "stylesheet.css", :rel => "stylesheet"}
     %script{:src => 'https://www.google.com/jsapi'}
     %script{:src => "chartkick.js"}
     %meta{:charset => "utf-8"}/
@@ -12,7 +13,7 @@
   %body
     .container
       .page-header
-        %h1
-          Sentiments
+        %img.header-image{:src => "sentiments-logo.png"}
+          
       %br
         = yield
