@@ -53,7 +53,6 @@ get '/search' do
     @user_name = params[:screen_name]
     @sentiment_hash, @tweet_hash = mine_tweets(@user_name,client,analyzer)
     @profile_pic = client.user(@user_name).profile_image_url.to_s
-    
     erb :search
 end
 
