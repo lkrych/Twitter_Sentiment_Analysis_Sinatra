@@ -3,4 +3,3 @@
 Most of the apps logic is in application.rb. Analyzer is a separate class that I use to parse phrases for how positive or negative they are.
 smile.rb and tweets.rb are toy command line apps that utilize this class.
 
-To muck around with this app go to https://shielded-harbor-83353.herokuapp.com/
